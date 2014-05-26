@@ -1,4 +1,6 @@
-# Ractive.js rxjs adaptor plugin
+# Ractive.js RxJS adaptor plugin
+
+**Work-in-progress. Does not yet work!**
 
 *Find more Ractive.js plugins at [ractivejs.org/plugins](http://ractivejs.org/plugins)*
 
