@@ -1,0 +1,17 @@
+{
+	"name": "ractive-adaptors-rxjs",
+	"repo": "git://github.com/ractivejs/ractive-adaptors-rxjs.git",
+	"description": "ractive-adaptors-rxjs",
+	"version": "0.1.0",
+	"keywords": [],
+	"dependencies": {
+		"ractivejs/ractive": "~0.4.0",
+		"Reactive-Extensions/RxJS": "~2.2.24"
+	},
+	"development": {},
+	"license": "MIT",
+	"main": "ractive-adaptors-rxjs.js",
+	"scripts": [
+		"ractive-adaptors-rxjs.js"
+	]
+}
