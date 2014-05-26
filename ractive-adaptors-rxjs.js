@@ -3,7 +3,7 @@
 	ractive-adaptors-rxjs
 	======================
 
-	Version <%= pkg.version %>.
+	Version 0.1.0.
 
 	RxJS adaptor for Ractive
 
