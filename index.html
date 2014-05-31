@@ -67,7 +67,7 @@
 			.merge( down.map( function () { return -1; }) )
 			.scan( 0, function ( x, y ) {
 				return x + y;
-			});
+			}).startWith( 0 );
 
 		ractive.set( 'counter', counter );
 	</script>
