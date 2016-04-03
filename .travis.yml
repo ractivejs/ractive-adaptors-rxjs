@@ -1,13 +1,6 @@
 language: node_js
 node_js:
-- '0.10'
-before_script:
-- npm install -g grunt-cli; chmod u+x scripts/deploy-to-gh-pages.sh; grunt
-script: ./scripts/deploy-to-gh-pages.sh
-env:
-  global:
-  - GH_REF: github.com/ractivejs/ractive-adaptors-rxjs.git
-  - secure: SYSunXF9N+jYWbeOtijO7Wql2CRjcPioYminmd1Ukl24++xRLzZWNA0WORPIkhMUal2je14rIDLtS1AoGofmyaac6Vr7zEgbDgqbG2+DGvR/7EV1AGIBJlRh4DHijBqmsuvYtkvwhHODeO0EnBVPvmSByLqsdLi9fCvEUkgazsw=
+- 'stable'
 branches:
   only:
     - master
