@@ -40,12 +40,14 @@ RxWrapper.prototype = {
 	}
 };
 
-export default {
+var ractiveAdaptorsRxjs = {
 	filter: function ( object ) {
 		// duck typing alert!
-		return object && typeof object.subscribe === 'function';
+		return object && typeof object.lift === 'function' && typeof object.subscribe === 'function';
 	},
 	wrap: function ( ractive, observable, keypath ) {
 		return new RxWrapper( ractive, observable, keypath );
 	}
 };
+
+export default ractiveAdaptorsRxjs;
