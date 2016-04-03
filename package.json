@@ -1,6 +1,6 @@
 {
   "name": "ractive-adaptors-rxjs",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": {
     "name": "Rich Harris"
   },
@@ -8,6 +8,7 @@
   "jsnext:main": "dist/ractive-adaptors-rxjs.es.js",
   "description": "ractive-adaptors-rxjs plugin for Ractive.js",
   "devDependencies": {
+    "mocha": "^2.4.5",
     "ractive": "github:ractivejs/ractive#build",
     "rollup": "^0.25.7",
     "rx": "^4.1.0"
