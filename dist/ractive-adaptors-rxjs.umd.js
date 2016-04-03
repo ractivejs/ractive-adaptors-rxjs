@@ -11,10 +11,8 @@
 		this.value = observable;
 		this.keypath = keypath;
 
-		this.dispose = observable.subscribe( function ( value ) {
-			if ( self.updating ) {
-				return;
-			}
+		this.subscriber = observable.subscribe( function ( value ) {
+			if ( self.updating ) return;
 
 			self._value = value;
 
@@ -29,7 +27,7 @@
 			return this._value;
 		},
 		teardown: function () {
-			this.dispose();
+			this.subscriber.dispose();
 		},
 		reset: function ( value ) {
 			if ( this.updating ) {
@@ -49,7 +47,7 @@
 	var ractiveAdaptorsRxjs = {
 		filter: function ( object ) {
 			// duck typing alert!
-			return object && typeof object.lift === 'function' && typeof object.subscribe === 'function';
+			return object && typeof object.subscribe === 'function';
 		},
 		wrap: function ( ractive, observable, keypath ) {
 			return new RxWrapper( ractive, observable, keypath );

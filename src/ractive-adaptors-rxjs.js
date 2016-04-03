@@ -5,10 +5,8 @@ function RxWrapper ( ractive, observable, keypath ) {
 	this.value = observable;
 	this.keypath = keypath;
 
-	this.dispose = observable.subscribe( function ( value ) {
-		if ( self.updating ) {
-			return;
-		}
+	this.subscriber = observable.subscribe( function ( value ) {
+		if ( self.updating ) return;
 
 		self._value = value;
 
@@ -23,7 +21,7 @@ RxWrapper.prototype = {
 		return this._value;
 	},
 	teardown: function () {
-		this.dispose();
+		this.subscriber.dispose();
 	},
 	reset: function ( value ) {
 		if ( this.updating ) {

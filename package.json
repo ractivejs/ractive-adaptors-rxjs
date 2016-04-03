@@ -8,12 +8,16 @@
   "jsnext:main": "dist/ractive-adaptors-rxjs.es.js",
   "description": "ractive-adaptors-rxjs plugin for Ractive.js",
   "devDependencies": {
-    "rollup": "^0.25.7"
+    "ractive": "github:ractivejs/ractive#build",
+    "rollup": "^0.25.7",
+    "rx": "^4.1.0"
   },
   "scripts": {
     "build": "npm run build:umd && npm run build:es",
     "build:umd": "rollup -c -f umd -o dist/ractive-adaptors-rxjs.umd.js",
     "build:es": "rollup -c -f es6 -o dist/ractive-adaptors-rxjs.es.js",
-    "prepublish": "npm run build"
+    "prepublish": "npm run test && npm run build:es",
+    "pretest": "npm run build:umd",
+    "test": "mocha test/test.js"
   }
 }
